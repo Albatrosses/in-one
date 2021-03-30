@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ScreenProtector from "../../common/screen-protector/ScreenProtector";
 import { HomeWrapper } from "./Home.style";
 
