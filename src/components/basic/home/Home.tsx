@@ -1,11 +1,13 @@
 import React from "react";
-import ScreenProtector from "../../plugins/screen-protector/ScreenProtector";
+import Router from "../../router/Router";
+import ScreenProtector from "../screen-protector/ScreenProtector";
 import { HomeWrapper } from "./Home.style";
 
 const Home: React.FC<any> = () => {
   return (
     <HomeWrapper>
-      <ScreenProtector />
+      {/* <ScreenProtector /> */}
+      <Router />
     </HomeWrapper>
   );
 };

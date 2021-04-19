@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "dayjs": "^1.10.4",
+    "loadsh": "^0.0.4",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-router": "^5.2.0",
@@ -16,6 +17,7 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.168",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router": "^5.1.13",
