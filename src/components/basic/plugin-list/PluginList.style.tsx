@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, FontSize } from "../../../constants/enum";
+import { BackgroundColor, FontSize, Shadow } from "../../../constants/style";
 
 export const PluginListWrapper = styled.div`
   height: 100%;
@@ -18,16 +18,16 @@ export const PluginListWrapper = styled.div`
     flex-wrap: wrap;
     .plugin-card {
       margin: 0 32px 32px 0;
-      border: 1px solid ${Color.Border};
-      box-shadow: 0px 1px ${Color.Shadow};
+      border: 1px solid ${BackgroundColor.Dark1};
+      box-shadow: 0px 1px ${Shadow.Down1};
       height: 320px;
       width: 240px;
       border-radius: 6px;
       box-sizing: border-box;
-      background-color: ${Color.White};
+      background-color: ${BackgroundColor.Dark10};
       cursor: pointer;
       &:hover {
-        background-color: ${Color.Border};
+        background-color: ${BackgroundColor.Dark9};
       }
       .plugin-logo {
         height: 50%;
