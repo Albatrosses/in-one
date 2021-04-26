@@ -4,6 +4,9 @@ import { pluginMap } from "../../router/config";
 import { map } from "lodash";
 import Nav from "./components/nav/Nav";
 import { useHistory } from "react-router";
+import pluginIcon from "../../../assets/img/svg/plugin.svg";
+
+
 
 const PluginList: React.FC<any> = () => {
   const history = useHistory();
@@ -11,21 +14,20 @@ const PluginList: React.FC<any> = () => {
     <PluginListWrapper>
       <Nav className="nav" />
       <div className="plugin-list">
-        {map(pluginMap, (plugin) => {
-          return (
-            <div
-              key={plugin.name}
-              className="plugin-card"
-              onClick={() => history.push(plugin.path)}
-            >
-              <div className="plugin-logo">plugin-logo</div>
-              <div className="plugin-content">
+        <div className="plugin-list-container">
+          {map(pluginMap, (plugin) => {
+            return (
+              <div
+                key={plugin.name}
+                className="plugin-card"
+                onClick={() => history.push(plugin.path)}
+              >
+                <div className="plugin-logo"><img src={pluginIcon} /></div>
                 <label className="plugin-label">{plugin.name}</label>
-                <span className="plugin-description">{plugin.description}</span>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </PluginListWrapper>
   );

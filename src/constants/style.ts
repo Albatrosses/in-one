@@ -29,21 +29,25 @@ export enum BackgroundColor {
 export enum Color {
   White = "#ffffff",
   Black = "#000000",
+  Gray = "#f5f5f5",
 }
 
 export enum Shadow {
-  Down1 = "0px, 1px	2px	-2px rgba(0, 0, 0, 0.16), 0px, 3px 6px	0px rgba(0, 0, 0, 0.12), 0px, 5px	12px 4px rgba(0, 0, 0, 0.09)"
+  Normal = "0 2px 6px rgb(33 33 38 / 20%);",
+  Down1 = "0px 1px 2px -2px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09)",
+  Down2 = "0px 3px	6px	-4px rgba(0, 0, 0, 0.12), 0px 6px	16px	0px rgba(0, 0, 0, 0.08), 0px 9px	28px	8px rgba(0, 0, 0, 0.05)",
+  Down3 = "0px 6px	16px -8px rgba(0, 0, 0, 0.08), 0px 9px	28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03)"
 }
 
 export enum FontSize {
   Title = "36px",
-  Label = "30px",
+  Label = "24px",
   Normal = "14px",
 }
 
 export enum LineHeight {
   Title = "44px",
-  Label = "38px",
+  Label = "32px",
   Normal = "22px",
 }
 
@@ -54,7 +58,11 @@ export enum BreakPoint {
 }
 
 export enum Media {
-  Desktop = "@media (min-width: 1024px)",
-  Tablet = "@media (max-width: 1023px)",
+  Desktop = "@media (min-width: 1025px)",
+  Tablet = "@media (max-width: 1024px) and (min-width: 768px)",
   Mobile = "@media (max-width: 767px)",
+}
+
+export enum Width {
+  Max = "1140px"
 }

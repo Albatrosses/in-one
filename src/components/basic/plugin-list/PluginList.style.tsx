@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BackgroundColor, FontSize, Shadow } from "../../../constants/style";
+import { Color, FontSize, LineHeight, Media, Shadow, Width } from "../../../constants/style";
 
 export const PluginListWrapper = styled.div`
   height: 100%;
@@ -8,40 +8,65 @@ export const PluginListWrapper = styled.div`
   flex-direction: column;
   .nav {
     flex: 0 0 80px;
+    height: 80px;
+    width: 100%;
   }
   .plugin-list {
     flex: auto;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
-    padding: 32px;
     box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    .plugin-card {
-      margin: 0 32px 32px 0;
-      border: 1px solid ${BackgroundColor.Dark1};
-      box-shadow: 0px 1px ${Shadow.Down1};
-      height: 320px;
-      width: 240px;
-      border-radius: 6px;
+    background-color: ${Color.Gray};
+    .plugin-list-container {
+      margin: 32px auto;
+      max-width: ${Width.Max};
+      width: 100%;
+      height: 100%;
       box-sizing: border-box;
-      background-color: ${BackgroundColor.Dark10};
-      cursor: pointer;
-      &:hover {
-        background-color: ${BackgroundColor.Dark9};
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));
+      grid-template-rows: repeat(auto-fill, minmax(184px, 1fr));
+      place-items: center center;
+      ${Media.Tablet} {
+        margin: 0 auto;
       }
-      .plugin-logo {
-        height: 50%;
-        width: 100%;
+      ${Media.Mobile} {
+        margin: 0 auto;
       }
-      .plugin-content {
-        height: 50%;
-        width: 100%;
+      .plugin-card {
+        height: 160px;
+        width: 160px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        cursor: pointer;
+        background-color: ${Color.White};
+        box-shadow: ${Shadow.Normal};
+        padding: 12px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+        &:hover {
+          box-shadow: ${Shadow.Down1};
+        }
+        .plugin-logo {
+          flex: auto;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 64px;
+            width: 64px;
+          }
+        }
         .plugin-label {
+          flex: 0 0 ${LineHeight.Label};
+          height: ${LineHeight.Label};
+          width: 100%;
           font-size: ${FontSize.Label};
-          align-self: center;
+          text-align: center;
         }
       }
     }
