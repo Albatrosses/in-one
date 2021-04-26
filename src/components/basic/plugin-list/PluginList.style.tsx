@@ -19,7 +19,8 @@ export const PluginListWrapper = styled.div`
     box-sizing: border-box;
     background-color: ${Color.Gray};
     .plugin-list-container {
-      margin: 32px auto;
+      margin: 0 auto;
+      padding: 32px 0;
       max-width: ${Width.Max};
       width: 100%;
       height: 100%;
@@ -28,11 +29,12 @@ export const PluginListWrapper = styled.div`
       grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));
       grid-template-rows: repeat(auto-fill, minmax(184px, 1fr));
       place-items: center center;
+      overflow-y: auto;
       ${Media.Tablet} {
-        margin: 0 auto;
+        padding: 12px 0;
       }
       ${Media.Mobile} {
-        margin: 0 auto;
+        padding: 12px 0;
       }
       .plugin-card {
         height: 160px;
