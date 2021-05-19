@@ -6,8 +6,6 @@ import Nav from "./components/nav/Nav";
 import { useHistory } from "react-router";
 import pluginIcon from "../../../assets/img/svg/plugin.svg";
 
-
-
 const PluginList: React.FC<any> = () => {
   const history = useHistory();
   return (
@@ -22,7 +20,9 @@ const PluginList: React.FC<any> = () => {
                 className="plugin-card"
                 onClick={() => history.push(plugin.path)}
               >
-                <div className="plugin-logo"><img src={pluginIcon} /></div>
+                <div className="plugin-logo">
+                  <img src={plugin.logo || pluginIcon} />
+                </div>
                 <label className="plugin-label">{plugin.name}</label>
               </div>
             );

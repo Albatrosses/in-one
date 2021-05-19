@@ -6,7 +6,7 @@ import { HomeWrapper } from "./Home.style";
 const Home: React.FC<any> = () => {
   return (
     <HomeWrapper>
-      {/* <ScreenProtector /> */}
+      <ScreenProtector />
       <Router />
     </HomeWrapper>
   );

@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { Color, FontSize, LineHeight, Media, Shadow, Width } from "../../../constants/style";
+import {
+  Color,
+  FontSize,
+  LineHeight,
+  Media,
+  Shadow,
+  Width,
+} from "../../../constants/style";
 
 export const PluginListWrapper = styled.div`
   height: 100%;
